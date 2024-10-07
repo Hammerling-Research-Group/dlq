@@ -1,5 +1,5 @@
 # DLQ
-Production code for DLQ Algorithm
+*Production code for DLQ Algorithm*
 
 ## Detection, localization, and quantification (DLQ) using continuous monitoring systems (CMS)
 
