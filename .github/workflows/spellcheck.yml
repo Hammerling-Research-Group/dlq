@@ -1,0 +1,24 @@
+name: Spell Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install codespell
+        run: |
+          sudo apt-get install -y codespell
+
+      - name: Run spell checker
+        run: |
+          # Ignore common R-specific words like "df", "plot", etc.
+          codespell --ignore-words-list "df,ggplot,roxygen,dplyr,tibble,dataframe,init" .
