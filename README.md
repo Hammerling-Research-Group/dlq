@@ -7,6 +7,6 @@ This repository contains code used to estimate methane emission start and end ti
 
 Inputs to the `MAIN_1_` and `MAIN_2_` files are controlled using two configuration files found in the `input_data` directory. The `simulation_config.txt` file controls input for the `MAIN_1_` script and `DLQ_config.txt` controls input for the `MAIN_2_` script.
 
-The `MAIN_3_` script generates all results and figures for the accompanying manuscript (Daniels et al. 2024): https://doi.org/10.1525/elementa.2023.00110
+The `../Example/MAIN_3_` script generates all results and figures for the accompanying manuscript (Daniels et al. 2024): https://doi.org/10.1525/elementa.2023.00110
 
 Note that the `input_data` directory also contains the raw concentration data, sensor locations, and source locations from the ADED experiment discussed in Daniels et al. 2024.
