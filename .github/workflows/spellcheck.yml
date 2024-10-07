@@ -21,4 +21,4 @@ jobs:
       - name: Run spell checker
         run: |
           # Ignore common R-specific words like "df", "plot", etc.
-          codespell --ignore-words-list "df,ggplot,roxygen,dplyr,tibble,dataframe,init" .
+          codespell --ignore-words-list "df,ggplot,roxygen,dplyr,tibble,dataframe,init,hist" .
