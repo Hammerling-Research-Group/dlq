@@ -1,4 +1,4 @@
-# DLQ
+# dlq
 *Production code for DLQ Algorithm*
 
 [![Spell Check](https://github.com/Hammerling-Research-Group/DLQ/actions/workflows/spellcheck.yml/badge.svg)](https://github.com/Hammerling-Research-Group/DLQ/actions/workflows/spellcheck.yml)
