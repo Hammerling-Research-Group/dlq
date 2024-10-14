@@ -3,9 +3,26 @@
 
 [![Spell Check](https://github.com/Hammerling-Research-Group/DLQ/actions/workflows/spellcheck.yml/badge.svg)](https://github.com/Hammerling-Research-Group/DLQ/actions/workflows/spellcheck.yml)
 
-## Detection, localization, and quantification (DLQ) using continuous monitoring systems (CMS)
+## Detection, localization, and quantification (DLQ) 
 
-This repository contains code used to estimate methane emission start and end time (detection), source location (localization), and emission rate (quantification) using concentration observations from a network of point-in-space continuous monitoring systems. The code is separated into two main scripts: 1) `MAIN_1_simulate` runs the Gaussian puff atmospheric dispersion model, and 2) `MAIN_2_DLQ` uses output from the Gaussian puff model to perform DLQ. The `HELPER_*` scripts contain auxiliary functions used in the `MAIN_1_` and `MAIN_2_` scripts.
+This repository contains code used to estimate methane emission start and end time (detection), source location (localization), and emission rate (quantification) using concentration observations from a network of point-in-space continuous monitoring systems. 
+
+## Installation & Usage
+
+Though the current code is still largely in "research code" form, users are still welcome to engage with it. 
+
+To do so, the simplest approach is to ingest the full repo, and work from the toy example: 
+
+```r
+library(httr)
+
+response <- GET("https://github.com/Hammerling-Research-Group/dlq/archive/refs/heads/main.zip", 
+                write_disk("DLQ.zip", overwrite = TRUE))
+
+unzip("DLQ.zip", exdir = "~/Desktop/DLQ") # or wherever you'd like to store the code
+```
+
+The code is separated into two main scripts: 1) `MAIN_1_simulate` runs the Gaussian puff atmospheric dispersion model, and 2) `MAIN_2_DLQ` uses output from the Gaussian puff model to perform DLQ. The `HELPER_*` scripts contain auxiliary functions used in the `MAIN_1_` and `MAIN_2_` scripts.
 
 Inputs to the `MAIN_1_` and `MAIN_2_` files are controlled using two configuration files found in the `input_data` directory:
   - `simulation_config.txt` file controls input for the `MAIN_1_` script
