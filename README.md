@@ -7,7 +7,7 @@
 
 This repository contains code used to estimate methane emission start and end time (detection), source location (localization), and emission rate (quantification) using concentration observations from a network of point-in-space continuous monitoring systems. 
 
-## Installation & Usage
+## Installation
 
 Though the current code is still largely in "research code" form, users are still welcome to engage with it. 
 
