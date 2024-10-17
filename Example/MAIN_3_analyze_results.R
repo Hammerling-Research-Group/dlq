@@ -23,13 +23,13 @@ if (commandArgs()[1] == "RStudio"){
 #---------------------------------------------------------------------------
 
 # Directory to save plots
-save.dir <- '../'
+save.dir <- './'
 
 # Path to event detection, localization, quantification results
-data.path <- '../output_data/DLQ_output.RData'
+data.path <- './output_data/DLQ_output.RData'
 
 # Path to leak (truth) data
-leak.path <- '../input_data/leak_data.csv'
+leak.path <- './input_data/leak_data.csv'
 
 # Set colors for plots
 tank.color <- "#3062CF" #blue
