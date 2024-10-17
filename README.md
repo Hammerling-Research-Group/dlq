@@ -7,18 +7,34 @@
 
 This repository contains code used to estimate methane emission start and end time (detection), source location (localization), and emission rate (quantification) using concentration observations from a network of point-in-space continuous monitoring systems. 
 
-## Installation
+## Installation & Usage
 
 Though the current code is still largely in "research code" form, users are still encouraged to engage with it. 
 
-To do so, the simplest approach is to ingest the full repo, and work from the packaged example and sample `input_data`: 
+The simplest approach is to ingest the full repo, and work from the packaged example and sample `input_data`. 
+
+To do so, follow these steps: 
+
+1. Download the latest version of this repository, which includes the entire DLQ codebase, as a zipped/compressed file:
 
 ```r
 download.file(url = "https://github.com/Hammerling-Research-Group/dlq/archive/refs/heads/main.zip", 
               destfile = "Desktop/DLQ.zip") # change `Desktop` to anywhere you'd like
 ```
 
+2. Navigate to where the code is stored and uncompress/unzip.
+
+3. Go into the unzipped folder and open `DLQ.Rproj` by double clicking it. This should open a new RStudio session, with `DLQ.Rproj` set as the root. 
+
+4. In the session, navigate to the `Files` tab and start by opening and running the `MAIN_1_simulate.R` script.
+
+5. Then, proceed to and run the `MAIN_2_DLQ.R` script.   
+
 ## Usage
+
+This line only downloads the zipped main codebase. Once downloaded, it needs to be uncompressed/unzipped. This can be done manually to avoid potential errors with file paths, etc. Once unzipped, users can open DLQ.Rproj, which will initiate a new RStudio session. From there, they navigate to R, and start with MAIN_1_* , and progress through.
+
+## Code Structure
 
 The code is separated into two main scripts: 1) `MAIN_1_simulate` runs the Gaussian puff atmospheric dispersion model, and 2) `MAIN_2_DLQ` uses output from the Gaussian puff model to perform DLQ. The `/helpers/HELPER_*` scripts contain auxiliary functions used in the `MAIN_1_` and `MAIN_2_` scripts.
 
