@@ -9,17 +9,13 @@ This repository contains code used to estimate methane emission start and end ti
 
 ## Installation
 
-Though the current code is still largely in "research code" form, users are still welcome to engage with it. 
+Though the current code is still largely in "research code" form, users are still encouraged to engage with it. 
 
-To do so, the simplest approach is to ingest the full repo, and work from the toy example: 
+To do so, the simplest approach is to ingest the full repo, and work from the packaged example and sample `input_data`: 
 
 ```r
-library(httr)
-
-response <- GET("https://github.com/Hammerling-Research-Group/dlq/archive/refs/heads/main.zip", 
-                write_disk("DLQ.zip", overwrite = TRUE))
-
-unzip("DLQ.zip", exdir = "~/Desktop/DLQ") # or wherever you'd like to store the code
+download.file(url = "https://github.com/Hammerling-Research-Group/dlq/archive/refs/heads/main.zip", 
+              destfile = "Desktop/DLQ.zip") # or wherever you'd like to store the source code
 ```
 
 The code is separated into two main scripts: 1) `MAIN_1_simulate` runs the Gaussian puff atmospheric dispersion model, and 2) `MAIN_2_DLQ` uses output from the Gaussian puff model to perform DLQ. The `HELPER_*` scripts contain auxiliary functions used in the `MAIN_1_` and `MAIN_2_` scripts.
