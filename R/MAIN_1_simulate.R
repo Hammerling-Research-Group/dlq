@@ -23,7 +23,7 @@ if (commandArgs()[1] == "RStudio"){
 #---------------------------------------------------------------------------
 
 # Set path to simulation configuration file
-config.file.dir <- '../input_data/simulation_config.txt'
+config.file.dir <- './input_data/simulation_config.txt'
 
 # END OF USER INPUT - NO MODIFICATION NECESSARY BELOW THIS POINT
 #---------------------------------------------------------------------------
