@@ -15,7 +15,7 @@ To do so, the simplest approach is to ingest the full repo, and work from the pa
 
 ```r
 download.file(url = "https://github.com/Hammerling-Research-Group/dlq/archive/refs/heads/main.zip", 
-              destfile = "Desktop/DLQ.zip") # or wherever you'd like to store the source code
+              destfile = "Desktop/DLQ.zip") # change `Desktop` to anywhere you'd like
 ```
 
 The code is separated into two main scripts: 1) `MAIN_1_simulate` runs the Gaussian puff atmospheric dispersion model, and 2) `MAIN_2_DLQ` uses output from the Gaussian puff model to perform DLQ. The `HELPER_*` scripts contain auxiliary functions used in the `MAIN_1_` and `MAIN_2_` scripts.
