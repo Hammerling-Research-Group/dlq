@@ -5,7 +5,9 @@
 
 ## Detection, localization, and quantification (DLQ) 
 
-This repository contains code used to estimate methane emission start and end time (detection), source location (localization), and emission rate (quantification) using concentration observations from a network of point-in-space continuous monitoring systems. This work is from the recently published paper: Daniels et al. (2024), https://doi.org/10.1525/elementa.2023.00110
+This repository contains code used to estimate methane emission start and end time (detection), source location (localization), and emission rate (quantification) using concentration observations from a network of point-in-space continuous monitoring systems. 
+
+For more on this work, see Daniels et al. (2024), https://doi.org/10.1525/elementa.2023.00110
 
 ## Installation & Usage
 
