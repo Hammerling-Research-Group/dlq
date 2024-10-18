@@ -28,7 +28,7 @@ download.file(url = "https://github.com/Hammerling-Research-Group/dlq/archive/re
 
 3. Go into the unzipped folder and open `DLQ.Rproj` by double clicking it. This should open a new RStudio session, with `DLQ.Rproj` set as the root. 
 
-4. In the session, navigate to the `Files` tab and then the `R` subdirectory. Start by opening and running the `MAIN_1_simulate.R` script. *Note*: For details on these scripts, see the `Code Structure` section below. 
+4. In the session, navigate to the `Files` tab and then open the `R` subdirectory. Start by opening and running the `MAIN_1_simulate.R` script. *Note*: For details on these scripts, see the `Code Structure` section below. 
 
 5. Then, proceed to and run the `MAIN_2_DLQ.R` script.   
 
