@@ -21,7 +21,7 @@ To do so, follow these steps:
 
 ```r
 download.file(url = "https://github.com/Hammerling-Research-Group/dlq/archive/refs/heads/main.zip", 
-              destfile = "Desktop/DLQ.zip") # change `Desktop` to anywhere you'd like
+              destfile = "~/Desktop/DLQ.zip") # change `Desktop` to anywhere you'd like
 ```
 
 2. Navigate to where the code is stored and uncompress/unzip.
