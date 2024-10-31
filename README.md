@@ -13,24 +13,29 @@ For more on this work, see Daniels et al. (2024), https://doi.org/10.1525/elemen
 
 Though the current code is still largely in "research code" form, users are still encouraged to engage with it. 
 
-The simplest approach is to ingest the full repo, and work from the packaged example and sample `input_data`. 
+To do so, the simplest approach is to clone the repo and work from the `dlq` directory. 
 
-To do so, follow these steps: 
+1. Set your desired directory from which to work. E.g., for your Desktop:
 
-1. Download the latest version of this repository, which includes the entire DLQ codebase, as a zipped/compressed file:
-
-```r
-download.file(url = "https://github.com/Hammerling-Research-Group/dlq/archive/refs/heads/main.zip", 
-              destfile = "~/Desktop/DLQ.zip") # change `Desktop` to anywhere you'd like
+```bash
+$ cd Desktop
 ```
 
-2. Navigate to where the code is stored and uncompress/unzip.
+2. Clone and store `dlq` at the desired location:
 
-3. Go into the unzipped folder and open `DLQ.Rproj` by double clicking it. This should open a new RStudio session, with `DLQ.Rproj` set as the root. 
+```bash
+$ git clone https://github.com/Hammerling-Research-Group/dlq.git
+```
 
-4. In the session, navigate to the `Files` tab and then open the `R` subdirectory. Start by opening and running the `MAIN_1_simulate.R` script. *Note*: For details on these scripts, see the `Code Structure` section below. 
+3. Move into the cloned `placement` directory:
 
-5. Then, proceed to and run the `MAIN_2_DLQ.R` script.   
+```bash
+$ cd dlq
+```
+
+Once cloned, go into the `dlq` folder and open `DLQ.Rproj` by double clicking it. This should open a new RStudio session, with `DLQ.Rproj` set as the root. 
+
+In the session, navigate to the `Files` tab and then open the `R` subdirectory. Start by opening and running the `MAIN_1_simulate.R` script. *Note*: For details on these scripts, see the `Code Structure` section below. Then, proceed to and run the `MAIN_2_DLQ.R` script.   
 
 ## Code Structure
 
