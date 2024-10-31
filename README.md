@@ -27,7 +27,7 @@ $ cd Desktop
 $ git clone https://github.com/Hammerling-Research-Group/dlq.git
 ```
 
-3. Move into the cloned `placement` directory:
+3. Move into the cloned `dlq` directory:
 
 ```bash
 $ cd dlq
