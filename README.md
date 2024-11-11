@@ -33,9 +33,11 @@ $ git clone https://github.com/Hammerling-Research-Group/dlq.git
 $ cd dlq
 ```
 
-Once cloned, go into the `dlq` folder and open `DLQ.Rproj` by double clicking it. This should open a new RStudio session, with `DLQ.Rproj` set as the root. 
+4. Once cloned, go into the `dlq` folder and open `DLQ.Rproj` by double clicking it. This should open a new RStudio session, with `DLQ.Rproj` set as the root. 
 
-In the session, navigate to the `Files` tab and then open the `R` subdirectory. Start by opening and running the `MAIN_1_simulate.R` script. *Note*: For details on these scripts, see the `Code Structure` section below. Then, proceed to and run the `MAIN_2_DLQ.R` script.   
+5. In the session, navigate to the `Files` tab and then open the `R` subdirectory.
+     - Start by opening and running the `MAIN_1_simulate.R` script (*For details on these scripts, see the `Code Structure` section below*).
+     - Then, proceed to and run the `MAIN_2_DLQ.R` script
 
 ## Code Structure
 
