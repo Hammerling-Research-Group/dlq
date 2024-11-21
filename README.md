@@ -2,6 +2,7 @@
 *Production code for DLQ Algorithm*
 
 [![Spell Check](https://github.com/Hammerling-Research-Group/DLQ/actions/workflows/spellcheck.yml/badge.svg)](https://github.com/Hammerling-Research-Group/DLQ/actions/workflows/spellcheck.yml)
+[![R Lint](https://github.com/Hammerling-Research-Group/dlq/actions/workflows/lint.yml/badge.svg)](https://github.com/Hammerling-Research-Group/dlq/actions/workflows/lint.yml)
 
 ## Detection, localization, and quantification (DLQ) 
 
