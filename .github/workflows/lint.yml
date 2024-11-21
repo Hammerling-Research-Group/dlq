@@ -14,12 +14,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          install.packages("lintr")
-          install.packages("testthat")
+          R -e 'install.packages("lintr")'
 
       - name: Run lintr
         run: |
-          library(lintr)
+          R -e 'library(lintr)
           lint_dir(
             linters = with_defaults(
               line_length_linter = line_length_linter(80),
@@ -27,4 +26,4 @@ jobs:
               assignment_linter = assignment_linter(),
               spaces_left_parentheses_linter = spaces_left_parentheses_linter()
             )
-          )
+          )'
