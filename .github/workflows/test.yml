@@ -1,4 +1,4 @@
-name: R tests
+name: CI tests
 
 on: [push, pull_request]
 
