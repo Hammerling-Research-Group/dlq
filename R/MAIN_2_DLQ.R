@@ -5,25 +5,19 @@
 # Author: William Daniels (wdaniels@mines.edu)
 # Last Updated: December 2023
 
-# Clear environment
-if(!is.null(dev.list())){dev.off()}
-rm(list = ls())
 
 # Import necessary libraries
 library(lubridate)
 library(zoo)
-library(rstudioapi)
-
-if (commandArgs()[1] == "RStudio"){
-  setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-}
+library(here)
 
 
 # START USER INPUT
 #---------------------------------------------------------------------------
 
 # Set path to simulation configuration file
-config.file.dir <- './input_data/DLQ_config.txt'
+#config.file.dir <- './input_data/DLQ_config.txt'
+config_file_path <- here::here("R", "input_data", "DLQ_config.txt")
 
 # END OF USER INPUT - NO MODIFICATION NECESSARY BELOW THIS POINT
 #---------------------------------------------------------------------------
@@ -34,7 +28,7 @@ config.file.dir <- './input_data/DLQ_config.txt'
 #---------------------------------------------------------------------------
 
 # Read in config file
-config <- suppressWarnings(read.table(config.file.dir))
+config <- suppressWarnings(read.table(config_file_path))
 config <- strsplit(config[,1], "=")
 
 # Parse out config file
@@ -48,10 +42,9 @@ length.threshold <- as.numeric(values  [parameters == "length.threshold"])
 # Get directories
 simulation.data.path <-            as.character(values[parameters == "simulation.data.path"])
 output.file.path <-                as.character(values[parameters == "output.file.path"])
-helper.spike.detection.alg.path <- as.character(values[parameters == "helper.spike.detection.alg.path"])
 
 # Source helper files which contain helper functions 
-source(helper.spike.detection.alg.path)
+source(here::here("R", "helpers", "HELPER_spike_detection_algorithm.R"))
 
 # Read in simulation data
 data <- readRDS(simulation.data.path)
