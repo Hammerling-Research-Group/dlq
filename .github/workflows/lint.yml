@@ -1,4 +1,4 @@
-name: R Lint
+name: CI lint
 
 on: [push, pull_request]
 
