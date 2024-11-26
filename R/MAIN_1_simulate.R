@@ -5,36 +5,25 @@
 # Author: William Daniels (wdaniels@mines.edu)
 # Last Updated: December 2023
 
-# Clear environment
-rm(list = ls())
-
 # Import necessary libraries
 library(zoo)
 library(lubridate)
 library(foreach)
 library(doParallel)
-library(rstudioapi)
-
-if (commandArgs()[1] == "RStudio"){
-  setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-}
+library(here)
 
 # START USER INPUT
 #---------------------------------------------------------------------------
 
 # Set path to simulation configuration file
-config.file.dir <- './input_data/simulation_config.txt'
-
-# END OF USER INPUT - NO MODIFICATION NECESSARY BELOW THIS POINT
-#---------------------------------------------------------------------------
-
+config_file_path <- here::here("R", "input_data", "simulation_config.txt")
 
 
 # STEP 1: READ IN CONFIG FILE AND SET UP PARAMETERS AND DIRECTORY STRUCTURE
 #---------------------------------------------------------------------------
 
 # Read in config file
-config <- read.table(config.file.dir)
+config <- read.table(config_file_path)
 config <- strsplit(config[,1], "=")
 
 # Parse out config file
@@ -52,16 +41,11 @@ run.mode         <- as.character(values[parameters == "run.mode"])
 tz               <- as.character(values[parameters == "tz"])
 
 # Get directories
-raw.sensor.observations.path <-     as.character(values[parameters == "raw.sensor.observations.path"])
-source.locations.path <-            as.character(values[parameters == "source.locations.path"])
-sensor.locations.path <-            as.character(values[parameters == "sensor.locations.path"])
 output.file.path <-                 as.character(values[parameters == "output.file.path"])
-helper.distance.conversions.path <- as.character(values[parameters == "helper.distance.conversions.path"])
-helper.gpuff.function.path <-       as.character(values[parameters == "helper.gpuff.function.path"])
 
 # Source helper files which contain helper functions 
-source(helper.distance.conversions.path)
-source(helper.gpuff.function.path)
+source(here::here("R", "helpers", "HELPER_distance_conversions.R"))
+source(here::here("R", "helpers", "HELPER_gpuff_function.R"))
 
 # Get start and stop times for simulation
 start.time <- as_datetime(as.character(values[parameters == "start.time"]), tz = tz)
@@ -76,7 +60,7 @@ code.start.time <- Sys.time()
 #---------------------------------------------------------------------------
 
 # Read in sensor data csv
-raw.data <- read.csv(raw.sensor.observations.path)
+raw.data <- read.csv(here::here("R", "input_data", "ADED_data_clean.csv"))
 
 # Set correct time zone
 raw.data$time <- as_datetime(as_datetime(raw.data$time), tz = tz)
@@ -90,12 +74,12 @@ raw.data <- raw.data[this.mask, ]
 #---------------------------------------------------------------------------
 
 # Read in sensor location csv
-sensor.locs <- suppressWarnings(read.csv(sensor.locations.path))
+sensor.locs <- read.csv(here::here("R", "input_data", "sensor_locations.csv"))
 sensor.locs <- sensor.locs[order(sensor.locs$name), ]
 n.r <- nrow(sensor.locs)
 
 # Read in source location csv
-source.locs <- suppressWarnings(read.csv(source.locations.path))
+source.locs <- read.csv(here::here("R", "input_data", "source_locations.csv"))
 n.s <- nrow(source.locs)
 
 # Initialize data structure to store simulation output
