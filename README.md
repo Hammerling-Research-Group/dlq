@@ -22,19 +22,19 @@ To do so, the simplest approach is to clone the repo and work from the `dlq` dir
 1. Set your desired directory from which to work. E.g., for your Desktop:
 
 ```bash
-$ cd Desktop
+cd Desktop
 ```
 
 2. Clone and store `dlq` at the desired location:
 
 ```bash
-$ git clone https://github.com/Hammerling-Research-Group/dlq.git
+git clone https://github.com/Hammerling-Research-Group/dlq.git
 ```
 
 3. Move into the cloned `dlq` directory:
 
 ```bash
-$ cd dlq
+cd dlq
 ```
 
 4. Once cloned, go into the `dlq` folder and open `DLQ.Rproj` by double clicking it. This should open a new RStudio session, with `DLQ.Rproj` set as the root. 
