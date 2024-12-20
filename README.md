@@ -52,5 +52,3 @@ Inputs to the `MAIN_1_` and `MAIN_2_` files are controlled using two configurati
   - `simulation_config.txt` file controls input for the `MAIN_1_` script
 
   - `DLQ_config.txt` controls input for the `MAIN_2_` script
-
-The `../Example/MAIN_3_` script generates all results and figures for the accompanying manuscript (Daniels et al. 2024): https://doi.org/10.1525/elementa.2023.00110
