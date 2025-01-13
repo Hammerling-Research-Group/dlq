@@ -3,6 +3,7 @@
 
 [![R Lint](https://github.com/Hammerling-Research-Group/dlq/actions/workflows/lint.yml/badge.svg)](https://github.com/Hammerling-Research-Group/dlq/actions/workflows/lint.yml)
 [![R tests](https://github.com/Hammerling-Research-Group/dlq/actions/workflows/test.yml/badge.svg)](https://github.com/Hammerling-Research-Group/dlq/actions/workflows/test.yml)
+[![Check Link Rot](https://github.com/Hammerling-Research-Group/dlq/actions/workflows/check-link-rot.yaml/badge.svg)](https://github.com/Hammerling-Research-Group/dlq/actions/workflows/check-link-rot.yaml)
 [![GitHub license](https://img.shields.io/github/license/Hammerling-Research-Group/DLQ?color=blue)](https://github.com/Hammerling-Research-Group/DLQ/blob/main/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/Hammerling-Research-Group/DLQ.svg)](https://github.com/Hammerling-Research-Group/DLQ/graphs/contributors/)
 
