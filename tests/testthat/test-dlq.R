@@ -14,7 +14,7 @@ test_that("Configuration file is read correctly", {
 
 # Check if sensor data is loaded correctly
 test_that("Raw data is loaded correctly", {
-  raw_data <- read.csv(here::here("R", "input_data", "ADED_data_clean.csv"))
+  raw_data <- read.csv(here::here("R", "input_data", "ADED_2022.csv"))
   expect_true(nrow(raw_data) > 0)
   expect_true("time" %in% colnames(raw_data))
 })
