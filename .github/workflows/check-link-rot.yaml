@@ -21,7 +21,7 @@ jobs:
       - name: Install lychee (Link Checker)
         uses: lycheeverse/lychee-action@v2.0.2
         with:
-          args: --verbose --exclude-mail --timeout 20 .
+          args: --verbose --include-mail --timeout 20 .
 
       - name: Upload broken links report (if any)
         if: failure()
